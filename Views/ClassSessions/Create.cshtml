@@ -1,0 +1,41 @@
+﻿@model A10.Models.ClassSession
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Add a new fitness class</h2>
+
+<h4>FitnessClass Information</h4>
+<hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="classSessionId" class="control-label"></label>
+                <input asp-for="classSessionId" class="form-control" />
+                <span asp-validation-for="classSessionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fitnessClassId" class="control-label"></label>
+                <select asp-for="fitnessClassId" class ="form-control" asp-items="ViewBag.fitnessClassId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassSessionStartTime" class="control-label"></label>
+                <input asp-for="ClassSessionStartTime" class="form-control" />
+                <span asp-validation-for="ClassSessionStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="locationId" class="control-label"></label>
+                <select asp-for="locationId" class ="form-control" asp-items="ViewBag.locationId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+            </form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

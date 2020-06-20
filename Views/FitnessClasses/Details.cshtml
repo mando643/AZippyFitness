@@ -1,0 +1,54 @@
+﻿@model A10.Models.FitnessClass
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FitnessClass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassDuration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassDuration)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassCaloriesBurnedApprox)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassCaloriesBurnedApprox)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassMaxEnrollees)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassMaxEnrollees)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassFee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassFee)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.fitnessclassId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,59 @@
+﻿@model A10.Models.Location
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Location</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="locationId" />
+            <div class="form-group">
+                <label asp-for="locationStreetAddress" class="control-label"></label>
+                <input asp-for="locationStreetAddress" class="form-control" />
+                <span asp-validation-for="locationStreetAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="city" class="control-label"></label>
+                <input asp-for="city" class="form-control" />
+                <span asp-validation-for="city" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="state" class="control-label"></label>
+                <input asp-for="state" class="form-control" />
+                <span asp-validation-for="state" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="zipCode" class="control-label"></label>
+                <input asp-for="zipCode" class="form-control" />
+                <span asp-validation-for="zipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="locationShortName" class="control-label"></label>
+                <input asp-for="locationShortName" class="form-control" />
+                <span asp-validation-for="locationShortName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="locationphoneNumber" class="control-label"></label>
+                <input asp-for="locationphoneNumber" class="form-control" />
+                <span asp-validation-for="locationphoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

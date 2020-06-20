@@ -1,0 +1,36 @@
+﻿@model A10.Models.ClassSession
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ClassSession</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassSessionStartTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClassSessionStartTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FitnessClass)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FitnessClass.fitnessclassId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Location.locationId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.classSessionId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,57 @@
+﻿@model A10.Models.FitnessClass
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FitnessClass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassDuration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassDuration)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassCaloriesBurnedApprox)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassCaloriesBurnedApprox)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassMaxEnrollees)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassMaxEnrollees)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fitnessclassFee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fitnessclassFee)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="fitnessclassId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

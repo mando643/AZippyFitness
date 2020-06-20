@@ -1,0 +1,38 @@
+﻿@model A10.Models.ClassEnrollee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>ClassEnrollee</h4>
+<hr />
+
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <h5>Class Session Id</h5>
+                <div class="col-md-4">
+                    <select asp-for="classSessionId" class="form-control" asp-items="ViewBag.classsession"></select>
+                </div>
+            </div>
+            <br /><br />
+                <div class="form-group">
+                    <h5>Member ID</h5>
+                    <div class="col-md-4">
+                    <select asp-for="memberId" class="form-control" asp-items="ViewBag.listOfMembers"></select>
+                    </div>
+                </div>
+            <br /><br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<A10.Models.Member>
+@{
+    ViewData["Title"] = "ListMembers";
+}
+
+<h2>List Members table</h2>
+<!-- ONE OPTION -->
+@*
+      <ul>
+        @foreach (Member m in ViewBag.mems as List<Member>)
+        {
+            <li> @m.firstName @m.lastName </li>
+        }
+    </ul>
+*@
+<!-- ANOTHER OPTION
+   foreach is why we need IEnumerable above otherwise we could
+    just @Model  Member -->
+@foreach (var item in Model)
+{
+    <dt>
+        @Html.DisplayNameFor(modelItem => item.firstName)
+
+    </dt>
+    <dd>
+        @Html.DisplayFor(modelItem => item.firstName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(modelItem => item.lastName)
+    </dt>
+    <dd>
+        @Html.DisplayFor(modelItem => item.lastName)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(modelItem => item.city)
+    </dt>
+    <dd>
+        @Html.DisplayFor(modelItem => item.city)
+    </dd>
+    @* Because Include was used to include MembershipType we can do this: *@
+    <dt>
+        @Html.DisplayNameFor(modelItem => item.MembershipType.membershipTypeDescription)
+    </dt>
+    <dd>
+        @Html.DisplayFor(modelItem => item.MembershipType.membershipTypeDescription)
+    </dd>
+    @* Because Include was used to include MembershipStatus we can do this: *@
+    <dt>
+        @Html.DisplayNameFor(modelItem => item.MembershipStatus.membershipStatusDescription)
+    </dt>
+    <dd>
+        @Html.DisplayFor(modelItem => item.MembershipStatus.membershipStatusDescription)
+    </dd>
+    <br />
+    <br />
+
+}

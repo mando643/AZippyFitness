@@ -1,0 +1,174 @@
+﻿@model A10.Models.Member
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Register a New Member</h2>
+
+<h4>Complete the following for the new member:</h4>
+<hr />
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <h5>Member ID</h5>
+        <div class="col-md-4">
+            <input asp-for="memberId" class="form-control" />
+        </div>
+        <span asp-validation-for="memberId" class="text-danger"></span>
+    </div>
+    <br /><br /><br />
+    <div class="form-group">
+        <h5>Last Name</h5>
+        <div class="col-md-4">
+            <input asp-for="lastName" class="form-control" />
+        </div>
+        <span asp-validation-for="lastName" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>First Name</h5>
+        <div class="col-md-4">
+            <input asp-for="firstName" class="form-control" />
+        </div>
+        <span asp-validation-for="firstName" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Street Address</h5>
+        <div class="col-md-4">
+            <input asp-for="streetAddress" class="form-control" />
+        </div>
+        <span asp-validation-for="streetAddress" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>city</h5>
+        <div class="col-md-4">
+            <input asp-for="city" class="form-control" />
+        </div>
+        <span asp-validation-for="city" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>state</h5>
+        <div class="col-md-4">
+            <input asp-for="state" class="form-control" />
+        </div>
+        <span asp-validation-for="state" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Zip code</h5>
+        <div class="col-md-4">
+            <input asp-for="zipCode" class="form-control" />
+        </div>
+        <span asp-validation-for="zipCode" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Email</h5>
+        <div class="col-md-4">
+            <input asp-for="emailAddress" class="form-control" />
+        </div>
+        <span asp-validation-for="emailAddress" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Home Phone</h5>
+        <div class="col-md-4">
+            <input asp-for="phoneHome" class="form-control" />
+        </div>
+        <span asp-validation-for="phoneHome" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Mobile Phone</h5>
+        <div class="col-md-4">
+            <input asp-for="phoneCell" class="form-control" />
+        </div>
+        <span asp-validation-for="phoneCell" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Membership Type Id</h5>
+        <div class="col-md-4">
+            <select asp-for="membershipTypeId" class="form-control" asp-items="ViewBag.membershipTypeId"></select>
+        </div>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Employer</h5>
+        <div class="col-md-4">
+            <input asp-for="employerCompanyName" class="form-control" />
+        </div>
+        <span asp-validation-for="employerCompanyName" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Employer Phone Number</h5>
+        <div class="col-md-4">
+            <input asp-for="employerPhoneNumber" class="form-control" />
+        </div>
+        <span asp-validation-for="employerPhoneNumber" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>membership StatusId</h5>
+        <div class="col-md-4">
+            <select asp-for="membershipStatusId" class="form-control" asp-items="ViewBag.membershipStatusId"></select>
+        </div>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Emergency Contact Name</h5>
+        <div class="col-md-4">
+            <input asp-for="emergencyContactName" class="form-control" />
+        </div>
+        <span asp-validation-for="emergencyContactName" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Emergency Contact Phone Number</h5>
+        <div class="col-md-4">
+            <input asp-for="emergencyContactPhone" class="form-control" />
+        </div>
+        <span asp-validation-for="emergencyContactPhone" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Emergency Contact Relationship</h5>
+        <div class="col-md-4">
+            <input asp-for="emergencyContactRelationship" class="form-control" />
+        </div>
+        <span asp-validation-for="emergencyContactRelationship" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Outstanding balance</h5>
+        <div class="col-md-4">
+            <input asp-for="currentAmountOwed" class="form-control" />
+        </div>
+        <span asp-validation-for="currentAmountOwed" class="text-danger"></span>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <h5>Primary Location Id</h5>
+        <div class="col-md-4">
+            <select asp-for="primaryLocationId" class="form-control" asp-items="ViewBag.primaryLocationId"></select>
+        </div>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <input type="submit" value="Enroll this new member!" class="btn btn-default" />
+    </div>
+</form>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

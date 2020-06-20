@@ -1,0 +1,65 @@
+﻿@model IEnumerable<A10.Models.FitnessClass>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fitnessclassTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitnessclassDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitnessclassDuration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitnessclassCaloriesBurnedApprox)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitnessclassMaxEnrollees)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitnessclassFee)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitnessclassTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitnessclassDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitnessclassDuration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitnessclassCaloriesBurnedApprox)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitnessclassMaxEnrollees)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitnessclassFee)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.fitnessclassId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.fitnessclassId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.fitnessclassId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

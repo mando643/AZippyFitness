@@ -1,0 +1,119 @@
+﻿@model A10.Models.Member
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Member</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="memberId" />
+            <div class="form-group">
+                <label asp-for="lastName" class="control-label"></label>
+                <input asp-for="lastName" class="form-control" />
+                <span asp-validation-for="lastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firstName" class="control-label"></label>
+                <input asp-for="firstName" class="form-control" />
+                <span asp-validation-for="firstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="streetAddress" class="control-label"></label>
+                <input asp-for="streetAddress" class="form-control" />
+                <span asp-validation-for="streetAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="city" class="control-label"></label>
+                <input asp-for="city" class="form-control" />
+                <span asp-validation-for="city" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="state" class="control-label"></label>
+                <input asp-for="state" class="form-control" />
+                <span asp-validation-for="state" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="zipCode" class="control-label"></label>
+                <input asp-for="zipCode" class="form-control" />
+                <span asp-validation-for="zipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="emailAddress" class="control-label"></label>
+                <input asp-for="emailAddress" class="form-control" />
+                <span asp-validation-for="emailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phoneHome" class="control-label"></label>
+                <input asp-for="phoneHome" class="form-control" />
+                <span asp-validation-for="phoneHome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phoneCell" class="control-label"></label>
+                <input asp-for="phoneCell" class="form-control" />
+                <span asp-validation-for="phoneCell" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="membershipTypeId" class="control-label"></label>
+                <select asp-for="membershipTypeId" class="form-control" asp-items="ViewBag.membershipTypeId"></select>
+                <span asp-validation-for="membershipTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employerCompanyName" class="control-label"></label>
+                <input asp-for="employerCompanyName" class="form-control" />
+                <span asp-validation-for="employerCompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employerPhoneNumber" class="control-label"></label>
+                <input asp-for="employerPhoneNumber" class="form-control" />
+                <span asp-validation-for="employerPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="membershipStatusId" class="control-label"></label>
+                <select asp-for="membershipStatusId" class="form-control" asp-items="ViewBag.membershipStatusId"></select>
+                <span asp-validation-for="membershipStatusId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="emergencyContactName" class="control-label"></label>
+                <input asp-for="emergencyContactName" class="form-control" />
+                <span asp-validation-for="emergencyContactName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="emergencyContactPhone" class="control-label"></label>
+                <input asp-for="emergencyContactPhone" class="form-control" />
+                <span asp-validation-for="emergencyContactPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="emergencyContactRelationship" class="control-label"></label>
+                <input asp-for="emergencyContactRelationship" class="form-control" />
+                <span asp-validation-for="emergencyContactRelationship" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="currentAmountOwed" class="control-label"></label>
+                <input asp-for="currentAmountOwed" class="form-control" />
+                <span asp-validation-for="currentAmountOwed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="primaryLocationId" class="control-label"></label>
+                <select asp-for="primaryLocationId" class="form-control" asp-items="ViewBag.primaryLocationId"></select>
+                <span asp-validation-for="primaryLocationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

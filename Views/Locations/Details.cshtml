@@ -1,0 +1,54 @@
+﻿@model A10.Models.Location
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.locationStreetAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.locationStreetAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.state)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.zipCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.zipCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.locationShortName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.locationShortName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.locationphoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.locationphoneNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.locationId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

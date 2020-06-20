@@ -1,0 +1,96 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color:#000;
+    color:#FFF;
+    background-image:url(../images/AZIPPYlogo.png);
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+select{
+    text-align:right;
+}
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+input {
+    float: left;
+    margin: 5px;
+}
+h5 {
+    float: left;
+    margin: 5px;
+}
+/* Set widths on the form inputs since otherwise they're 100% wide */
+
+textarea {
+    max-width: 280px;
+}
+
+input {
+    display: inline-block;
+    width: 140px;
+    float: right;
+}
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* buttons and links extension to use brackets: [ click me ] */
+.btn-bracketed::before {
+    display: inline-block;
+    content: "[";
+    padding-right: 0.5em;
+}
+
+.btn-bracketed::after {
+    display: inline-block;
+    content: "]";
+    padding-left: 0.5em;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+
+.centerit {text-align:center}
+.navbar-inverse .navbar-brand {
+    color: #FFFFFF;
+}   
+.leadersub {font-size: larger; font-weight:500;
+            text-align:justify
+}
+.leader {
+    font: bold 20px arial, verdana;
+}
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 979px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+    .leadersub {
+        
+        font-weight: 500;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align:justify;
+    }
+    .leader {
+        display: none;
+    }
+    body {background-image:url("../images/AZIPPYlogoMINI.png")}
+}
